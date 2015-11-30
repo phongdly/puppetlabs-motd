@@ -1,0 +1,23 @@
+HOSTS:
+  debian6-amd64-aix71:
+    roles:
+      - master
+      - dashboard
+      - database
+      - agent
+    platform: debian-6-amd64
+    hypervisor: vcloud
+    template: Delivery/Quality Assurance/Templates/vCloud/debian-6-x86_64
+  pe-aix-71-acceptance:
+    roles:
+      - agent
+    platform: aix-7.1-power
+    hypervisor: aix
+    ip: pe-aix-71-acceptance.delivery.puppetlabs.net
+CONFIG:
+  nfs_server: NONE
+  consoleport: 443
+  datastore: instance0
+  folder: Delivery/Quality Assurance/Enterprise/Dynamic
+  resourcepool: delivery/Quality Assurance/Enterprise/Dynamic
+  pooling_api: http://vcloud.delivery.puppetlabs.net/

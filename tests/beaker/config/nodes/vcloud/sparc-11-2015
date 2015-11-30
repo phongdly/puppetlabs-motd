@@ -1,0 +1,23 @@
+HOSTS:
+  centos-6-x86_64-sparc11:
+    roles:
+      - master
+      - dashboard
+      - database
+      - agent
+    platform: el-6-x86_64
+    hypervisor: vcloud
+    template: Delivery/Quality Assurance/Templates/vCloud/centos-6-x86_64
+  pe-sparc-11-acceptance:
+    roles:
+      - frictionless
+      - agent
+    platform: solaris-11-sparc
+    ip: cisparc.delivery.puppetlabs.net
+CONFIG:
+  nfs_server: NONE
+  consoleport: 443
+  datastore: instance0
+  folder: Delivery/Quality Assurance/Enterprise/Dynamic
+  resourcepool: delivery/Quality Assurance/Enterprise/Dynamic
+  pooling_api: http://vcloud.delivery.puppetlabs.net/
